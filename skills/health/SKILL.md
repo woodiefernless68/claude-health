@@ -196,6 +196,7 @@ Tier-adjusted CLAUDE.md checks:
 - ALL tiers: Is CLAUDE.md short and executable? No prose, no background, no soft guidance.
 - ALL tiers: Does it have build/test commands?
 - ALL tiers: Flag any nested CLAUDE.md files found in subdirectories -- stacked context causes unpredictable behavior.
+- ALL tiers: Compare global and local CLAUDE.md for duplicate rules (same constraint in both = wasted context) and conflicting rules (opposite directives = unpredictable behavior). Duplicates are 🟢, conflicts are 🔴.
 - STANDARD+: Is there a "Verification" section with per-task done-conditions?
 - STANDARD+: Is there a "Compact Instructions" section?
 - COMPLEX only: Is content that belongs in rules/ or skills already split out?
@@ -214,6 +215,7 @@ Tier-adjusted MEMORY.md checks STANDARD+:
 - Check if project has `.claude/projects/.../memory/MEMORY.md`
 - Verify CLAUDE.md references MEMORY.md for architecture decisions
 - Ensure key design decisions: data models, API contracts, major tradeoffs are documented there
+- Weight urgency by conversation count from CONVERSATION FILES section: 0–2 files = low urgency, 3–9 = medium, 10+ = 🔴 Critical if MEMORY.md absent -- active projects lose decisions across sessions
 
 Tier-adjusted AGENTS.md checks COMPLEX with multiple modules:
 - Verify CLAUDE.md includes "AGENTS.md 使用指南" section
@@ -291,6 +293,7 @@ Tier-adjusted hooks checks:
   - Flag hooks missing `matcher` -- would fire on ALL tool calls
 - ALL tiers: Flag hook commands running full test suites on every edit (cargo test, npm test, pytest, go test, jest) -- replace with fast checkers (cargo check, tsc --noEmit, bash -n, go build) for immediate feedback; reserve full tests for explicit verification
 - ALL tiers: Flag hook commands without output truncation (| head -N or | tail -N) -- unbounded output floods context on every edit
+- ALL tiers: Flag hook commands without error surfacing -- commands that can fail silently (no || echo 'FAILED' or explicit exit handling) give Claude no signal that the check failed
 
 allowedTools hygiene ALL tiers:
 - Flag genuinely dangerous operations only: sudo *, force-delete root paths, *>* (redirect to arbitrary files), git push --force origin main
